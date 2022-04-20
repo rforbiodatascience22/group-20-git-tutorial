@@ -3,24 +3,24 @@
     "path": "~/Desktop/Assignment_Lab7.Rmd",
     "project_path": null,
     "type": "r_markdown",
-    "hash": "1519007797",
+    "hash": "258196272",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1650473830673.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "232,10",
-        "scrollLine": "216"
+        "cursorPosition": "238,38",
+        "scrollLine": "221"
     },
     "folds": "",
-    "lastKnownWriteTime": 1650480351,
+    "lastKnownWriteTime": 1650481246,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1650480505143,
+    "last_content_update": 1650481246378,
     "read_only": false,
     "read_only_alternatives": []
 }

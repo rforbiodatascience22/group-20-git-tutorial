@@ -1,0 +1,25 @@
+{
+    "id": "8DD70B11",
+    "path": "~/Desktop/group-20-git-tutorial/abc/XYZ.csv",
+    "project_path": "abc/XYZ.csv",
+    "type": "text",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1650480879536.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1650480887,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1650480887715,
+    "read_only": false,
+    "read_only_alternatives": []
+}
