@@ -1,0 +1,229 @@
+---
+title: "R for Bio Data Science"
+author: "Oriade Latifah Simpson"
+date: "Spring 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+**Scripting in a reproducible and collaborative framework using Github Via Rstudio.**
+
+
+```{bash}
+
+```
+
+
+During these exercises we are going to learn how to create a Github repository and how to use it to synchronise work between all team members. 
+It is split into a few parts:
+
+1. Setting up a repository
+2. Basic Committing and Synchronising. 
+3. Solving Conflicts
+4. Checking out and basic branching. 
+
+
+The first three are the most essential for working with Git and Github. The last explains how to use git features to speed up the development process. 
+Use the learning materials to explain how to perform Git commands in RStudio. 
+
+Rules:
+
+* Use the RStudio Interface Only. 
+* Communicate clearly with your team and also remember to listen them. 
+* If you make a mistake, use the emergency options. 
+
+
+Emergency Options:
+
+* If you made mistake, use the revert command.
+* If you cannot pull, copy the files somewhere else, reset then try to pull. If this doesn't work then stash the index.
+* If you cannot push, make sure to pull first. 
+* If it does not work, start a new R project and pull all of the changes. 
+
+
+### Setting up a repository
+
+Do you have a github account? Yes. 
+
+1. The Github website is : <https://github.com/>
+
+2. Select rforbiodatascience22 as the owner , create a new repository called  group-20-git-tutorial where 20 is your group number. 
+   Select the public option, add a README.md file and click CREATE. 
+   
+3. Go to repository Settings (bar above the files), select Access -> Collaborators and hit Add people > add names of your team mates. 
+
+4. See if the others accept the invitation. 
+(yes)
+
+***
+
+### Clone a Repository on RStudio Cloud 
+
+1. Go to the RStudio Cloud
+
+2. Select our workspace (F2022 R For Bio Data Science)
+
+3. Upper right corner select New Project > New Project from Git Repository. 
+Paste the URL of your repo 
+
+https://github.com/REPO-OWNER-USERNAME/REPO-USERNAME or
+https://github.com/rforbiodatascience22/group-20-git-tutorial
+                             
+Congrats! You all have a copy of a repository in your project!
+
+This action of setting up a copy of a repository is called cloning.
+
+***
+
+### Task 1.3. Set up a username.
+
+This should be done every time you set up a new project in RStudio cloud.
+
+Set up your GitHub name and email for the project. 
+
+You do it by typing in the console:
+
+```{r}
+# install the usethis package first. 
+#install.packages("usethis")
+library(usethis)
+```
+
+```{r}
+usethis::use_git_config(user.name = "s172084", user.email = "s172084@dtu.dk")
+# OR usethis::use_git_config(user.name = "m.o.l.s", user.email = "orie.simpson@gmail.com")
+```
+
+### SET UP A PAT
+
+Either configure SSH connections or use Personal Access Token (PAT).
+
+PAT is like a password, for interacting with GitHub via RStudio Cloud. 
+
+Generate it via the GitHub page.
+
+Type in the console :
+```{r}
+usethis::create_github_token()
+```
+
+1. GitHub website > type your password > add a description – set ‘RStudio Cloud’ > hit Generate token.
+
+Save the password securely.
+
+When trying to pull or push from remote repository use the PAT. 
+
+Manual setting up the PAT: 
+
+1. Type in the console:
+
+```{r}
+gitcreds::gitcreds_set(). 
+```
+
+2. Paste the PAT when it says Enter password or token. 
+
+Managing Github credentials information : <https://usethis.r-lib.org/articles/git-credentials.html> 
+
+
+### Commit first files
+
+1. Open Git in your RStudio Project stage two files called .gitignore and .Rproj
+
+2. Commit the files and add a message. 
+
+3. Push the changes. 
+
+(2 Files Changed 17 insertions.)
+
+.gitignore is a special file, which states which other files in the project should not be committed. 
+.Rproj is a project configuration file. 
+
+### Synchoronise the repository. 
+
+Others do as above. 
+
+### Create and Commit a File. 
+
+1. Each team member: Create files in RStudio. Fill the file/s with any content. Save it with a unique name among your team. Pull from the remote repository, create, stage and commit the file/s, push the changes.
+
+2. Other team member: Pull from the remote repository,
+then create normally, stage and commit your own files and push the changes.
+
+3. All: Browse through the commit history, compare with remote repository history 
+(can be found on GitHub webpage).
+
+Diff > History. 
+
+### Concurrent Modifications. 
+
+This is the simplest workflow of using git: pull, commit, push.
+As long as you do not modify the same file you can use it to synchronize your work.
+
+**ONE AT A TIME:**
+
+1. One person: Pull, modify one or two of the files 
++ (e.g. add a line, remove a line, modify a line, stage, commit and **push**.
+
+
+2. Other person:  Pull, rename one file, commit and **push**.
+The file shows as deleted. An error will pop up asking to stash changes .
+
+Type: 
+
+```{bash eval=FALSE, include=FALSE}
+git stash
+```
+
+This deletes the changes. 
+
+
+3. Other person:  Pull, delete one file, push.
+
+Note: When RStudio Cloud goes to sleep, refresh the page. 
+
+## Git Ignore
+
+.gitignore is a very special file because it states which files in the repository should not be committed. 
+
+Exclude files that include passwords or pdf results. If you have a reproducible workflow, commit the “.Rmd” file, but ignore the “.pdf”, as anyone can rerun it and get the same result.
+
+<https://www.atlassian.com/git/tutorials/saving-changes/gitignore> is a tutorial for the “.gitignore” file.
+
+1. One person: Create a file named “clever_file.txt”. 
+
+Add a line “clever_file.txt” to your “.gitignore” file. 
+Commit & push it. 
+
+Notice there is no option to stage the “clever_file.txt”. 
+Note: Other members cannot see this file because it is in the .gitignore. 
+
+
+Others: **Pull**. Create your own “hidden_file.txt”.
+Add a line “hidden_file.txt” to your “.gitignore” file. 
+Commit & push it. 
+
+
+One Person: Create a “document” directory. Create an “Waterfalls.Rmd” document with any content in the “document” directory, but do not knit it. Commit it.
+
+Knit the document.
+Add a line “.Rmd” to your “.gitignore” file. 
+Commit changes in the “.gitignore”. Push it.
+
+Others: Pull.
+Note: Other members cannot see these files because they are in the .gitignore. 
+
+
+
+
+
+
+
+
+
+
+
