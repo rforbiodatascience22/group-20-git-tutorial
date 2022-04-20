@@ -3,4 +3,8 @@
 .RData
 .Ruserdata
 clever_file.txt
+<<<<<<< HEAD
 hidden_file.txt
+=======
+Document/Waterfalls.Rmd
+>>>>>>> e9ef93a (Added Waterfalls.Rmd to the gitignore file.)
