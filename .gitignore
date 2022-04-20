@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 clever_file.txt
-".Rmd"
+.Rmd
+Waterfalls.Rmd
