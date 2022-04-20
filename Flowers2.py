@@ -6,7 +6,7 @@ for i in Weather:
   
 ColdWeather = "The weather in Copenhagen is very cold"
 
-for i in ColdWeather:
-  print(i)
+for l in ColdWeather:
+  print(l)
   
 
