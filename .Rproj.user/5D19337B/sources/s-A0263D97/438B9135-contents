@@ -217,8 +217,24 @@ Commit changes in the “.gitignore”. Push it.
 Others: Pull.
 Note: Other members cannot see these files because they are in the .gitignore. 
 
+**Note: There is a long delay on github with getting the changes to be shown online.**
+
+### Guardians of the directory. 
+
+Another special file is .gitkeep.
+
+Create a directory in your local repository. 
+You cannot stage it, as you could do with regular files.
+
+If you really want to keep a folder without its content, but you want to keep a folder for synchronization.
+( e.g. big files which you do nt want to push to a remote repository) 
 
 
+One person: Create a folder called “abc”. Inside create an empty file called “.gitkeep”. Commit and push it.
+All team members: Pull.
+One team member: In the directory “abc” create a file called “XYZ.csv” with any content inside (it can stay empty). Don’t commit the file, but add it to “.gitignore” regarding the path (it should be “abs/XYZ.csv”). Commit the “.gitignore” and push.
+All team members: Pull.
+Right now you could write code that, e.g. downloads a file called “XYZ.csv” to a folder “abc” and you are sure that the folder exists and the file itself won’t get commited.
 
 
 
