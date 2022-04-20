@@ -29,5 +29,5 @@ plot(pressure, type = "h", col = "darkblue")
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-This is an addition from Flowers. 
+This is a deletion from mushroom. 
 
