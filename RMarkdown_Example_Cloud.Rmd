@@ -1,0 +1,72 @@
+---
+title: "R for Bio Data Sciece"
+author: "Miss Oriade Latifah Simpson "
+date: 'Spring 2022'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown on the Cloud
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+```{r cars}
+str(cars)
+```
+
+```{r pressure, echo=FALSE}
+str(pressure)
+```
+
+
+```{r}
+# Plot the data in an imaginative way.  
+ggplot(data = pressure,
+       mapping = aes(x = temperature, y = pressure, fill = pressure))+
+
+  
+  #Make a barplot
+  geom_bar(stat="identity")+
+  
+  labs(
+    title = " ",
+    x = "Temperature",
+    y = "Pressure",
+    # Change the name of the legend. 
+    fill  = " ")+
+  theme(
+    
+    # put the legend on the left 
+    legend.position = "left",
+    
+    # Change the legend background. 
+    legend.background =  element_rect(fill = "darkblue"),
+    
+    # Change the text colour in the legend. 
+    legend.text = element_text(colour = "white"),
+    
+    # Make the entire plot background blue. 
+    plot.background = element_rect(fill = "lightgray"),
+    
+    # Make the title white
+    title = element_text(colour = "White", size = 13),
+    
+    # put the title in the center. 
+    plot.title = element_text(hjust = 0.3),
+    
+    # Make the background blue
+    panel.background = element_rect(fill = "white"),
+    
+    #remove grid lines
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    
+    # remove the border around the plot. 
+    panel.border = element_blank())
+```
+
