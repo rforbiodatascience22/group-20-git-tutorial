@@ -1,3 +1,4 @@
 A. More Conflicts 
 b. Modification of a line. This line is modified. 
 D. Deleted ^^^^^^^^^^^
+E. There is now a file called Last_Conflicts and Last_Conflict. 
