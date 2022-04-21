@@ -16,6 +16,7 @@ library(tidyverse)
 ```
 
 ```{r cars}
+# Thiss is the cars dataset. 
 str(cars)
 ```
 
