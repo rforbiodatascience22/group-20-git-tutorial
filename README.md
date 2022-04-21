@@ -6,7 +6,8 @@ following an exercise from Laboratory 7.
 
 
 **Who contributes to it?**
-Members of Group Number 20 
+
+Members of Group Number 20 contribute to this repository. 
 
 
 ## Getting help
