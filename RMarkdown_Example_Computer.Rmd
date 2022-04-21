@@ -1,7 +1,7 @@
 ---
 title: "R for Bio Data Science"
 author: "Oriade Latifah Simpson"
-date: "21/04/2022"
+date: "Spring 2022"
 output: html_document
 ---
 
@@ -23,6 +23,7 @@ str(cars)
 ```{r pressure, echo=FALSE}
 str(pressure)
 ```
+
 ```{r}
 # Plot the data in an imaginative way.  
 ggplot(data = cars,
