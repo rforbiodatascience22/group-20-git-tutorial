@@ -1,0 +1,72 @@
+---
+title: "R for Bio Data Science"
+author: "Oriade Latifah Simpson"
+date: "Spring 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown on the Computer
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+```{r cars}
+# This is the cars dataset. 
+str(cars)
+```
+
+```{r pressure, echo=FALSE}
+str(pressure)
+```
+
+```{r}
+# Plot the data in an imaginative way.  
+ggplot(data = cars,
+       mapping = aes(x = speed, y = dist, fill = dist))+
+
+  
+  #Make a barplot
+  geom_point(size = 5, pch = 21)+
+  
+  labs(
+    title = " ",
+    x = "Speed",
+    y = "dist",
+    # Change the name of the legend. 
+    fill  = " ")+
+  theme(
+    
+    # put the legend on the left 
+    legend.position = "left",
+    
+    # Change the legend background. 
+    legend.background =  element_rect(fill = "darkblue"),
+    
+    # Change the text colour in the legend. 
+    legend.text = element_text(colour = "black"),
+    
+    # Make the entire plot background blue. 
+    plot.background = element_rect(fill = "chocolate1"),
+    
+    # Make the title white
+    title = element_text(colour = "White", size = 13),
+    
+    # put the title in the center. 
+    plot.title = element_text(hjust = 0.3),
+    
+    # Make the background dark blue
+    panel.background = element_rect(fill = "white"),
+    
+    #remove grid lines
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    
+    # remove the border around the plot. 
+    panel.border = element_blank())
+```
+
