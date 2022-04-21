@@ -1,4 +1,3 @@
 A. More Conflicts 
-b. Modification of a line
-C. Deletion of a line
+b. Modification of a line. This line is modified. 
 D. Deleted ^^^^^^^^^^^
