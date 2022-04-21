@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-This is the text file to keep. 
-=======
-# 
->>>>>>> 9c6712d3ef4f8e453823e8d8ee17c5e6b4db211c
+This is the text file to keep out of the two files called Proper_Conflicts. 
