@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/m.o.l.s/Desktop/Laterationstylieiylie/ZenDNA/README.Rmd="1A10C8AF"
 /Users/m.o.l.s/Desktop/Laterationstylieiylie/ZenDNA/doc/ZenDNA_vignette.Rmd="71E4868A"
 /Users/m.o.l.s/Desktop/group-20-git-tutorial/.gitignore="9D392C87"
@@ -17,3 +18,11 @@
 /Users/m.o.l.s/Desktop/group-20-git-tutorial/abc/XYZ.csv="B1D574C0"
 /Users/m.o.l.s/Desktop/group-20-git-tutorial/clever_file.txt="20FF27EA"
 /Users/m.o.l.s/Desktop/group-20-git-tutorial/hidden_file.txt="CE170EAE"
+=======
+/cloud/project/.gitignore="F1439035"
+/cloud/project/Last_Conflict.txt="E8A2B940"
+/cloud/project/Proper_Conflicts.txt="65666AED"
+/cloud/project/README.md="7F2CD076"
+/cloud/project/Solving_Conflicts.txt="75B85377"
+/cloud/project/Ten_Empty_Lines.R="E9E32F21"
+>>>>>>> 9c6712d3ef4f8e453823e8d8ee17c5e6b4db211c
